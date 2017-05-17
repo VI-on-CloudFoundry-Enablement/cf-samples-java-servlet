@@ -17,5 +17,6 @@ public class ServletExample extends HttpServlet {
     	response.setContentType("text/plain;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         response.getWriter().println("First Cloud Foundry Application");
+         
     }
 }
