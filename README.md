@@ -1,29 +1,16 @@
 cf-samples-java-servlet
 =====================
 
-Run Locally
------------
+# CloudFoundry Example based on a Simple Servlet
 
-```
-mvn package tomcat7:run
-# in another shell call
-curl http://localhost:8080/hello/
-```
+- Overview
+There are many ways how to build services with java on cloud foundry. One option is to use just a plain servlet and build a service within that. 
 
-> **Note:** The trailing `/` is needed to see the response in the shell!
-
+- Prepare and Deploy
+Go into the manifest and replace the org name d043918trial with your org name
+Run "mvn clean install" to build the java package
+Then run "cf push" and the approuter should get deployed
 
 
-Deploy to Cloud Foundry
------------------------------
 
-```
-cf push
-```
-
-> **Note**: For the time being we do not have a namespace concept for the trial landscape, hence app names are gobal. As such you may encounter the following error:
->
-> `FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hello-java`
->
-> To fix that, please add a suffix or prefix (or change the entire name) to the `host` attribute within the [manifest.yml](/manifest.yml) file!
 
