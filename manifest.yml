@@ -5,4 +5,4 @@ applications:
   memory: 256M
   instances: 1
   hostname: cf-samples-${random-word}
-  path: target/cf-samples-java-servlet.war
+  path: target/cf-samples-java-spring-service.war
